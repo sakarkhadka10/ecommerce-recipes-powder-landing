@@ -2,6 +2,7 @@
 import Image from "next/image";
 import React, { useState } from "react";
 import { FaBarsStaggered, FaXmark } from "react-icons/fa6";
+import AnimatedButton from "./UI/AnimatedButton";
 
 const NavBar = () => {
   const navLinks = ["Home", "About", "Blogs", "Contact Us"];
@@ -17,7 +18,8 @@ const NavBar = () => {
           priority={true}
           className="w-40 md:52 h-auto"
         />
-        <div>
+        <div className="flex justify-center items-center gap-6">
+          {/* This is for desktop view */}
           <div className="hidden md:block">
             {navLinks.map((link, index) => {
               return (
@@ -30,7 +32,12 @@ const NavBar = () => {
               );
             })}
           </div>
-
+          <div className="hidden md:block">
+            <div className="flex justify-between items-center gap-8">
+              <AnimatedButton title="Login" />
+              <AnimatedButton title="SignUp" />
+            </div>
+          </div>
           {/* THis is for responsive Icon */}
           <div className=" text-4xl md:hidden">
             {open ? (
@@ -46,7 +53,7 @@ const NavBar = () => {
 
           {/* This is For Mobile Responsive Icons */}
           {open && (
-            <div className="absolute left-0 top-0 pt-6 h-full bg-gray-800 w-2/3 ">
+            <div className="absolute left-0 top-0 pt-6 h-full bg-gray-800  rounded-tr-2xl w-2/3 ">
               {navLinks.map((link, index) => {
                 return (
                   <div
@@ -57,6 +64,10 @@ const NavBar = () => {
                   </div>
                 );
               })}
+              <div className="absolute bottom-3 flex space-x-4 w-full justify-center items-center ">
+                <AnimatedButton title="Login" />
+                <AnimatedButton title="SignUp" />
+              </div>
             </div>
           )}
         </div>
