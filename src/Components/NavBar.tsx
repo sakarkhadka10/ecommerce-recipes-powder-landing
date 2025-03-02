@@ -20,7 +20,7 @@ const NavBar = () => {
         />
         <div className="flex justify-center items-center gap-6">
           {/* This is for desktop view */}
-          <div className="hidden md:block">
+          <div className="hidden lg:block">
             {navLinks.map((link, index) => {
               return (
                 <span
@@ -32,14 +32,14 @@ const NavBar = () => {
               );
             })}
           </div>
-          <div className="hidden md:block">
+          <div className="hidden lg:block">
             <div className="flex justify-between items-center gap-8">
               <AnimatedButton title="Login" />
               <AnimatedButton title="SignUp" />
             </div>
           </div>
           {/* THis is for responsive Icon */}
-          <div className=" text-4xl md:hidden">
+          <div className=" text-4xl lg:hidden">
             {open ? (
               <button onClick={() => setOpen(false)} aria-label="Close menu">
                 <FaXmark />
