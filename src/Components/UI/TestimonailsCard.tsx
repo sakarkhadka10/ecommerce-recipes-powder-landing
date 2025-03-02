@@ -21,8 +21,9 @@ const TestimonailsCard = ({ image, name, company }: TestimonailsCardProps) => {
         </div>
         <div>
           <p>
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque
-            laboriosam assumenda asperiores porro.assumenda asperiores porro."
+            &ldquo;Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Doloremque laboriosam assumenda asperiores porro.assumenda
+            asperiores porro.&ldquo;
           </p>
         </div>
         <div className="font-bold">
